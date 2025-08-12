@@ -26,23 +26,23 @@ function findMostUpcomingFixture(fixtures) {
 }
 
 function Row({ standing }: any) {
-  const { details, participant, position, points, rule } = standing;
+  const { details, participant, position, points, rule } = standing || {};
 
-  const matchesPlayed = details.find(
+  const matchesPlayed = details?.find(
     (item) => item.type.code === "overall-matches-played"
   );
-  const goalDifference = details.find(
+  const goalDifference = details?.find(
     (item) => item.type.code === "goal-difference"
   );
 
-  const sortedUpcoming = participant.upcoming.sort(
+  const sortedUpcoming = participant?.upcoming.sort(
     (a, b) => a.starting_at_timestamp - b.starting_at_timestamp
   );
-  const { fixture: nextFixture } = useFixtureById({ id: sortedUpcoming[0].id });
+  const { fixture: nextFixture } = useFixtureById({ id: sortedUpcoming?.[0].id });
 
   const { participants } = nextFixture?.data || {};
 
-  const rival = participants?.find((team) => team.id !== participant.id);
+  const rival = participants?.find((team) => team.id !== participant?.id);
 
   return (
     <div className="relative col-span-full grid grid-cols-subgrid items-center justify-items-center font-medium">
@@ -54,14 +54,14 @@ function Row({ standing }: any) {
         <Image
           width={512}
           height={512}
-          src={participant.image_path}
+          src={participant?.image_path}
           className="w-7"
-          alt={participant.name}
+          alt={participant?.name}
         />
-        <p>{participant.name}</p>
+        <p>{participant?.name}</p>
       </div>
-      <p className="px-1">{matchesPlayed.value}</p>
-      <p className="px-1">{goalDifference.value}</p>
+      <p className="px-1">{matchesPlayed?.value}</p>
+      <p className="px-1">{goalDifference?.value}</p>
       <p className="px-1">{points}</p>
       {rival ? (
         <Image

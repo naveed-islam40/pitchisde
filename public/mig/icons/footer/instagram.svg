@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__ic_instagram" width="100%" height="100%" viewBox="0 0 15 15" fill="white">
+  <path id="prefix__Rectangle_3182" d="M0 0H15V15H0z" data-name="Rectangle 3182" fill="none"></path>
+  <path id="prefix__Path_2200"
+    d="M11.25 0h-7.5A3.761 3.761 0 0 0 0 3.75v7.5A3.761 3.761 0 0 0 3.75 15h7.5A3.761 3.761 0 0 0 15 11.25v-7.5A3.761 3.761 0 0 0 11.25 0zM7.5 10.625A3.125 3.125 0 1 1 10.625 7.5 3.126 3.126 0 0 1 7.5 10.625zm4.063-6.25a.938.938 0 1 1 .938-.938.936.936 0 0 1-.938.938z"
+    data-name="Path 2200" fill="var(--Footer-iconColor)"></path>
+</svg>

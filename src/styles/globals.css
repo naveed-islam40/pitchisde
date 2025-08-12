@@ -1,0 +1,262 @@
+@import "react-modern-drawer/dist/index.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Inter";
+  overflow-x: hidden;
+}
+
+.rdp .rdp-day_selected {
+  background-color: #006428 !important;
+}
+:root {
+  --rt-color-info: #00401a !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer / Edge */
+  user-select: none;
+  /* Non-prefixed version */
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  pointer-events: none;
+}
+
+@layer utilities {
+  .tc {
+    @apply transition-colors;
+  }
+
+  .ta {
+    @apply transition-all;
+  }
+
+  .xt-c {
+    @apply text-center;
+  }
+
+  .xt-l {
+    @apply text-left;
+  }
+
+  .xt-r {
+    @apply text-right;
+  }
+
+  .feedback {
+    @apply cursor-pointer transition-colors hover:bg-black/10;
+  }
+}
+
+@layer components {
+  .app-container {
+    --app-max-width: 1500px;
+    max-width: var(--app-max-width);
+    @apply mx-auto px-4;
+  }
+
+  .app-block {
+    box-shadow: 0px 2px 5px 0px #00000020;
+  }
+
+  .shimmer-effect {
+    @apply before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent;
+  }
+
+  .app-btn-light {
+    @apply p-2 font-poppins font-semibold text-x-bargreen hover:underline;
+  }
+
+  .d {
+    @apply bg-red-400;
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+}
+
+.dash-hex-main {
+  display: flex;
+  --s: 72px;
+  --r: 0.9;
+  --h: 0.25;
+  --v: 0.5;
+  --hc: calc(clamp(0, var(--h), 0.5) * var(--s));
+  --vc: calc(clamp(0, var(--v), 0.5) * var(--s) * var(--r));
+  --mv: 1px;
+  --mh: calc(var(--mv) + (var(--s) - 2 * var(--hc)) / 2);
+  --f: calc(2 * var(--s) * var(--r) + 4 * var(--mv) - 2 * var(--vc) - 2px);
+
+  @apply mx-[-10px] lg:mx-[-20px] 2xl:mx-0;
+}
+
+.dash-hex-container {
+  font-size: 0; /*disable white space between inline block element */
+  /* padding-bottom: calc(1.5 * var(--s) * var(--r) + var(--mv) + 120px); */
+  padding-bottom: 80px;
+}
+
+.dash-hex-container div {
+  width: var(--s);
+  margin: var(--mv) var(--mh);
+  height: calc(var(--s) * var(--r));
+  display: inline-block;
+  font-size: initial;
+  clip-path: polygon(
+    var(--hc) 0,
+    calc(100% - var(--hc)) 0,
+    100% var(--vc),
+    100% calc(100% - var(--vc)),
+    calc(100% - var(--hc)) 100%,
+    var(--hc) 100%,
+    0 calc(100% - var(--vc)),
+    0 var(--vc)
+  );
+  background: #fff;
+  margin-bottom: calc(var(--mv) - var(--vc));
+}
+
+.dash-hex-container div:nth-child(odd) {
+  background: #fff;
+}
+.dash-hex-container::before {
+  content: "";
+  width: calc(var(--s) / 2 + var(--mh));
+  float: left;
+  clear: both;
+  height: 100%;
+  shape-outside: repeating-linear-gradient(
+    #0000 0 calc(var(--f) - 1.32px),
+    #000 0 var(--f)
+  );
+}
+
+.bg_cards_rounded {
+  background-image: url("/hexcell.png") !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
+
+.news-carousel .splide__pagination__page.is-active {
+  background-color: #006428;
+}
+
+/* styles/globals.css */
+.custom-tooltip {
+  background-color: #ffffff !important;
+  color: #000 !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  max-width: 300px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 100;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+path[id^="connector-"] {
+  stroke-width: 2px !important;
+  stroke: #4a5568 !important;
+}
+
+path[id^="connector-"] {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* 
+path[id^="connector-"] {
+  d: "M755 385.5 H700 V545 H675";
+} */
+
+/* text, rect[class*="sc-"] {
+   width: 100px !important;
+   text-align: center !important;
+} */
+
+

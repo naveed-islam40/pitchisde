@@ -1,0 +1,12 @@
+<svg width="18" height="18" viewBox="0 0 18 18" fill="white" xmlns="http://www.w3.org/2000/svg">
+  <g id="buttonTwitter" clip-path="url(#clip0_4926_54582)">
+    <path id="Vector"
+      d="M0.9394 1.80005L7.19404 10.2389L0.899902 17.1H2.31646L7.82696 11.093L12.2793 17.1H17.0999L10.4934 8.18652L16.3519 1.80005H14.9353L9.86042 7.33241L5.76 1.80005H0.9394ZM3.02255 2.85295H5.23715L15.0164 16.047H12.8018L3.02255 2.85295Z"
+      fill="var(--Footer-iconColor)"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_4926_54582">
+      <rect width="18" height="18" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>

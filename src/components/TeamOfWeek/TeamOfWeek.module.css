@@ -1,0 +1,5 @@
+.field_bg {
+  background-image: url("./field.png");
+  background-position: center;
+  background-size: cover;
+}

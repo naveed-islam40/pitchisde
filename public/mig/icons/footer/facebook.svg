@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="white" height="100%" viewBox="0 0 18 18">
+  <g id="ic_facebook" transform="translate(-57 -215)">
+    <path id="Rectangle_3404" fill="none" d="M0 0h18v18H0z" class="cls-1" data-name="Rectangle 3404"
+      transform="translate(57 215)"></path>
+    <path id="f" fill="var(--Footer-iconColor)"
+      d="M419.46 170.85v-7.379h2.488l.373-2.888h-2.86v-1.84c0-.834.232-1.4 1.428-1.4h1.511v-2.576a20.411 20.411 0 0 0-2.222-.113 3.47 3.47 0 0 0-3.7 3.807v2.126H414v2.888h2.478v7.379z"
+      class="cls-2" transform="translate(-352.2 61.55)"></path>
+  </g>
+</svg>

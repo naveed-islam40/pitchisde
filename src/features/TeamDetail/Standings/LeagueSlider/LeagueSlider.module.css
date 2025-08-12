@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .league_slider {
+    @apply w-7 h-7 p-1.5 box-content rounded-full transition-colors shrink-0;
+    @apply hover:bg-[#F2F2F2];
+  }
+
+  .league_slider[data-active=true] {
+    box-shadow: 0px 0px 4px 0px #00000040;
+    @apply bg-[#F2F2F2];
+  }
+}

@@ -1,0 +1,8 @@
+@tailwind components;
+
+@layer components {
+  .table th,
+  .table td {
+    @apply px-5 xl:px-3.5 2xl:px-5 whitespace-nowrap;
+  }
+}

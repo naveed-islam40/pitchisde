@@ -189,7 +189,7 @@ export function Hero() {
             </div>
             <div>
               <p className=" text-4xl text-center whitespace-nowrap">
-                {`${homeTeamScore?.score?.goals} - ${awayTeamScore?.score?.goals}`}
+                {`${homeTeamScore?.score?.goals || "-"} - ${awayTeamScore?.score?.goals || "-"}`}
               </p>
               <p className="text-center text-base">{state.name}</p>
               <div className="mt-2">
